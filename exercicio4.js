@@ -1,4 +1,3 @@
-
 const database = {
       tables: {},
    createTable(statement) {
@@ -45,9 +44,9 @@ const database = {
 };
 try {
 database.execute("create table author (id number, name string, age number, city string, state string, country string)")
-database.execute("insert into author (id, name, age) value (1, Douglas Crockford, 62)");
-database.execute("insert into author (id, name, age) value (2, Linus Torvaalds, 47)");
-database.execute("insert into author (id, name, age) value (3, Martin fowler, 54)");
+database.execute("insert into author (id, name, age) values (1, Douglas Crockford, 62)");
+database.execute("insert into author (id, name, age) values (2, Linus Torvaalds, 47)");
+database.execute("insert into author (id, name, age) values (3, Martin fowler, 54)");
 console.log(JSON.stringify(database, undefined, " "));
 } catch (e) {
   console.error(e);
